@@ -22,6 +22,12 @@
   <div class="orb orb--soft"></div>
 </div>
 
+<div class="starfield" aria-hidden="true">
+  <div class="stars stars--sm"></div>
+  <div class="stars stars--md"></div>
+</div>
+<div class="grain" aria-hidden="true"></div>
+
 <!-- ============ NAV ============ -->
 <nav class="nav">
   <a href="index.html#home" class="nav__brand">
@@ -133,21 +139,23 @@
 
   <!-- ============ VENTURE: LAGOS FINEST REALTY ============ -->
   <section class="section venture bg-realty" id="realty">
-    <div class="container grid-2">
-      <div class="venture__copy reveal">
-        <p class="eyebrow">Real Estate · Property Marketing · Advisory</p>
-        <h3 style="margin-top:1.1rem; color:var(--cream); font-size:clamp(1.7rem,3vw,2.3rem);">Lagos Finest Realty Solutions</h3>
-        <p class="venture__desc">
-          Founded in 2019, Lagos Finest Realty Solutions is a real estate marketing and advisory firm helping individuals navigate property ownership and investment.
-        </p>
-        <div class="btn-row"><a href="#" class="btn btn-ghost">Explore Venture</a></div>
-      </div>
-      <div class="reveal reveal-delay-1">
+    <div class="container">
+      <div class="venture__grid reveal">
+        <div class="venture__name">
+          <p class="eyebrow">Real Estate · Property Marketing · Advisory</p>
+          <h3 style="margin-top:1.1rem; color:var(--cream); font-size:clamp(1.7rem,3vw,2.3rem);">Lagos Finest Realty Solutions</h3>
+        </div>
         <div class="venture__frame">
           <video muted loop playsinline preload="metadata" poster="" aria-label="Lagos Finest Realty Solutions showreel">
             <source src="https://raw.githubusercontent.com/Emekaeluem/precious-diri/main/images/realestate-vid.mp4" type="video/mp4">
           </video>
           <div class="venture__sound"><span class="dot"></span><span class="label">Sound on</span></div>
+        </div>
+        <div class="venture__desc-block">
+          <p class="venture__desc">
+            Founded in 2019, Lagos Finest Realty Solutions is a real estate marketing and advisory firm helping individuals navigate property ownership and investment.
+          </p>
+          <div class="btn-row"><a href="#" class="btn btn-ghost">Explore Venture</a></div>
         </div>
       </div>
     </div>
@@ -155,43 +163,47 @@
 
   <!-- ============ VENTURE: PREKEISH JEWELRY ============ -->
   <section class="section venture bg-jewelry" id="jewelry">
-    <div class="container grid-2 reverse">
-      <div class="reveal">
+    <div class="container">
+      <div class="venture__grid reveal reverse">
+        <div class="venture__name">
+          <p class="eyebrow">Jewelry · Fashion · Lifestyle</p>
+          <h3 style="margin-top:1.1rem; color:var(--cream); font-size:clamp(1.7rem,3vw,2.3rem);">Prekeish Jewelry</h3>
+        </div>
         <div class="venture__frame">
           <video muted loop playsinline preload="metadata" poster="" aria-label="Prekeish Jewelry showreel">
             <source src="https://raw.githubusercontent.com/Emekaeluem/precious-diri/main/images/jewelry-vid.mp4" type="video/mp4">
           </video>
           <div class="venture__sound"><span class="dot"></span><span class="label">Sound on</span></div>
         </div>
-      </div>
-      <div class="venture__copy reveal reveal-delay-1">
-        <p class="eyebrow">Jewelry · Fashion · Lifestyle</p>
-        <h3 style="margin-top:1.1rem; color:var(--cream); font-size:clamp(1.7rem,3vw,2.3rem);">Prekeish Jewelry</h3>
-        <p class="venture__desc">
-          A lifestyle venture reflecting Precious' appreciation for beauty, elegance and intentional expression.
-        </p>
-        <div class="btn-row"><a href="#" class="btn btn-ghost">Explore Venture</a></div>
+        <div class="venture__desc-block">
+          <p class="venture__desc">
+            A lifestyle venture reflecting Precious' appreciation for beauty, elegance and intentional expression.
+          </p>
+          <div class="btn-row"><a href="#" class="btn btn-ghost">Explore Venture</a></div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- ============ VENTURE: PERIDOT USHERS ============ -->
   <section class="section venture bg-ushers" id="ushers">
-    <div class="container grid-2">
-      <div class="venture__copy reveal">
-        <p class="eyebrow">Events · Hospitality · Professional Services</p>
-        <h3 style="margin-top:1.1rem; color:var(--cream); font-size:clamp(1.7rem,3vw,2.3rem);">Peridot Ushers</h3>
-        <p class="venture__desc">
-          A professional events and ushering brand focused on creating polished experiences and delivering exceptional service.
-        </p>
-        <div class="btn-row"><a href="#" class="btn btn-ghost">Explore Venture</a></div>
-      </div>
-      <div class="reveal reveal-delay-1">
+    <div class="container">
+      <div class="venture__grid reveal">
+        <div class="venture__name">
+          <p class="eyebrow">Events · Hospitality · Professional Services</p>
+          <h3 style="margin-top:1.1rem; color:var(--cream); font-size:clamp(1.7rem,3vw,2.3rem);">Peridot Ushers</h3>
+        </div>
         <div class="venture__frame">
           <video muted loop playsinline preload="metadata" poster="" aria-label="Peridot Ushers showreel">
             <source src="https://raw.githubusercontent.com/Emekaeluem/precious-diri/main/images/usher-vid.mp4" type="video/mp4">
           </video>
           <div class="venture__sound"><span class="dot"></span><span class="label">Sound on</span></div>
+        </div>
+        <div class="venture__desc-block">
+          <p class="venture__desc">
+            A professional events and ushering brand focused on creating polished experiences and delivering exceptional service.
+          </p>
+          <div class="btn-row"><a href="#" class="btn btn-ghost">Explore Venture</a></div>
         </div>
       </div>
     </div>
@@ -202,24 +214,24 @@
     <div class="container">
       <div class="glass purpose__panel reveal">
         <span class="purpose__mark" aria-hidden="true">SAP</span>
-        <div class="grid-2">
-          <div>
+        <div class="venture__grid">
+          <div class="venture__name">
             <p class="eyebrow">Purpose &amp; Impact</p>
             <h2 style="margin-top:1.1rem; color:var(--cream);">Helping Women Discover What Is Possible</h2>
-            <p class="lede" style="margin-top:1.2rem;">
+          </div>
+          <div class="venture__frame">
+            <video muted loop playsinline preload="metadata" poster="" aria-label="She Activates Purpose coaching video">
+              <source src="https://raw.githubusercontent.com/Emekaeluem/precious-diri/main/images/purposecoach_vid.mp4" type="video/mp4">
+            </video>
+            <div class="venture__sound"><span class="dot"></span><span class="label">Sound on</span></div>
+          </div>
+          <div class="venture__desc-block">
+            <p class="lede">
               Precious believes that every woman carries something valuable within her — a gift, an idea, a vision or a purpose waiting to be activated.
             </p>
-            <p>In 2023, she launched <strong style="color:var(--gold-soft); font-weight:600;">She Activates Purpose</strong>, a community created to help women discover their potential and activate their God-given gifts.</p>
-            <p>Through mentorship, conversations and empowerment initiatives, the platform creates room for women to grow, build and pursue purposeful lives.</p>
+            <p style="margin-top:.8rem;">In 2023, she launched <strong style="color:var(--gold-soft); font-weight:600;">She Activates Purpose</strong>, a community created to help women discover their potential and activate their God-given gifts.</p>
+            <p style="margin-top:.8rem;">Through mentorship, conversations and empowerment initiatives, the platform creates room for women to grow, build and pursue purposeful lives.</p>
             <div class="btn-row"><a href="index.html#contact" class="btn btn-primary">Discover She Activates Purpose</a></div>
-          </div>
-          <div>
-            <div class="venture__frame">
-              <video muted loop playsinline preload="metadata" poster="" aria-label="She Activates Purpose coaching video">
-                <source src="https://raw.githubusercontent.com/Emekaeluem/precious-diri/main/images/purposecoach_vid.mp4" type="video/mp4">
-              </video>
-              <div class="venture__sound"><span class="dot"></span><span class="label">Sound on</span></div>
-            </div>
           </div>
         </div>
       </div>

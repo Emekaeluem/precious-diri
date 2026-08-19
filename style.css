@@ -18,6 +18,7 @@
   --gold:          #D9B675;
   --gold-soft:     #EFDDB0;
   --gold-deep:     #B98F4A;
+  --particle-gold: #FFC94D;
   --rose:          #E7B7B0;
   --rose-deep:     #C98D8A;
 
@@ -201,27 +202,27 @@ p{ color: var(--muted); text-wrap: pretty; }
 }
 .stars{
   position:absolute; top:0; left:0;
-  width:3px; height:3px; border-radius:50%;
+  width:4px; height:4px; border-radius:50%;
   background:transparent;
 }
 .stars--sm{
-  opacity:.75;
-  filter: blur(.3px) drop-shadow(0 0 4px rgba(217,182,117,.85));
-  box-shadow: 1326px 308px var(--gold-soft), 1617px 1333px var(--gold-soft), 197px 148px var(--gold-soft), 2194px 192px var(--gold-soft), 1497px 1193px var(--gold-soft), 237px 1039px var(--gold-soft), 879px 76px var(--gold-soft), 352px 888px var(--gold-soft), 1712px 143px var(--gold-soft), 985px 185px var(--gold-soft), 2257px 869px var(--gold-soft), 242px 1158px var(--gold-soft), 507px 457px var(--gold-soft), 2583px 1284px var(--gold-soft), 2387px 126px var(--gold-soft), 2363px 1199px var(--gold-soft), 1624px 101px var(--gold-soft), 905px 95px var(--gold-soft), 2280px 272px var(--gold-soft), 1186px 858px var(--gold-soft), 590px 1107px var(--gold-soft), 482px 1169px var(--gold-soft), 1263px 1147px var(--gold-soft), 740px 211px var(--gold-soft), 2382px 1169px var(--gold-soft), 769px 762px var(--gold-soft), 399px 1121px var(--gold-soft), 257px 1155px var(--gold-soft), 244px 1267px var(--gold-soft), 843px 1016px var(--gold-soft), 2177px 875px var(--gold-soft), 1286px 953px var(--gold-soft), 2398px 928px var(--gold-soft), 1481px 613px var(--gold-soft), 1017px 368px var(--gold-soft), 999px 167px var(--gold-soft), 2352px 614px var(--gold-soft), 2151px 1013px var(--gold-soft), 1406px 919px var(--gold-soft), 1179px 1247px var(--gold-soft), 299px 241px var(--gold-soft), 2096px 856px var(--gold-soft), 675px 700px var(--gold-soft), 622px 1001px var(--gold-soft), 1727px 80px var(--gold-soft), 317px 1142px var(--gold-soft), 2347px 642px var(--gold-soft), 1393px 717px var(--gold-soft), 2434px 1017px var(--gold-soft), 2375px 934px var(--gold-soft), 281px 191px var(--gold-soft), 1105px 970px var(--gold-soft), 266px 124px var(--gold-soft), 1268px 1325px var(--gold-soft), 2367px 1395px var(--gold-soft), 1825px 582px var(--gold-soft), 1580px 1369px var(--gold-soft), 1421px 46px var(--gold-soft), 1891px 727px var(--gold-soft), 688px 1251px var(--gold-soft), 479px 1011px var(--gold-soft), 241px 446px var(--gold-soft), 1177px 264px var(--gold-soft), 1014px 814px var(--gold-soft), 1601px 1016px var(--gold-soft), 330px 340px var(--gold-soft), 1839px 822px var(--gold-soft), 2250px 569px var(--gold-soft), 560px 881px var(--gold-soft), 2253px 570px var(--gold-soft);
+  opacity:.9;
+  filter: blur(.2px) drop-shadow(0 0 6px rgba(255,201,77,.95));
+  box-shadow: 1326px 308px var(--particle-gold), 1617px 1333px var(--particle-gold), 197px 148px var(--particle-gold), 2194px 192px var(--particle-gold), 1497px 1193px var(--particle-gold), 237px 1039px var(--particle-gold), 879px 76px var(--particle-gold), 352px 888px var(--particle-gold), 1712px 143px var(--particle-gold), 985px 185px var(--particle-gold), 2257px 869px var(--particle-gold), 242px 1158px var(--particle-gold), 507px 457px var(--particle-gold), 2583px 1284px var(--particle-gold), 2387px 126px var(--particle-gold), 2363px 1199px var(--particle-gold), 1624px 101px var(--particle-gold), 905px 95px var(--particle-gold), 2280px 272px var(--particle-gold), 1186px 858px var(--particle-gold), 590px 1107px var(--particle-gold), 482px 1169px var(--particle-gold), 1263px 1147px var(--particle-gold), 740px 211px var(--particle-gold), 2382px 1169px var(--particle-gold), 769px 762px var(--particle-gold), 399px 1121px var(--particle-gold), 257px 1155px var(--particle-gold), 244px 1267px var(--particle-gold), 843px 1016px var(--particle-gold), 2177px 875px var(--particle-gold), 1286px 953px var(--particle-gold), 2398px 928px var(--particle-gold), 1481px 613px var(--particle-gold), 1017px 368px var(--particle-gold), 999px 167px var(--particle-gold), 2352px 614px var(--particle-gold), 2151px 1013px var(--particle-gold), 1406px 919px var(--particle-gold), 1179px 1247px var(--particle-gold), 299px 241px var(--particle-gold), 2096px 856px var(--particle-gold), 675px 700px var(--particle-gold), 622px 1001px var(--particle-gold), 1727px 80px var(--particle-gold), 317px 1142px var(--particle-gold), 2347px 642px var(--particle-gold), 1393px 717px var(--particle-gold), 2434px 1017px var(--particle-gold), 2375px 934px var(--particle-gold), 281px 191px var(--particle-gold), 1105px 970px var(--particle-gold), 266px 124px var(--particle-gold), 1268px 1325px var(--particle-gold), 2367px 1395px var(--particle-gold), 1825px 582px var(--particle-gold), 1580px 1369px var(--particle-gold), 1421px 46px var(--particle-gold), 1891px 727px var(--particle-gold), 688px 1251px var(--particle-gold), 479px 1011px var(--particle-gold), 241px 446px var(--particle-gold), 1177px 264px var(--particle-gold), 1014px 814px var(--particle-gold), 1601px 1016px var(--particle-gold), 330px 340px var(--particle-gold), 1839px 822px var(--particle-gold), 2250px 569px var(--particle-gold), 560px 881px var(--particle-gold), 2253px 570px var(--particle-gold);
   animation: starDriftA 170s linear infinite;
 }
 .stars--sm::after{
-  content:""; position:absolute; top:1400px; left:0; width:3px; height:3px; border-radius:50%;
+  content:""; position:absolute; top:1400px; left:0; width:4px; height:4px; border-radius:50%;
   box-shadow: inherit;
 }
 .stars--md{
-  opacity:.9;
-  filter: blur(.4px) drop-shadow(0 0 7px rgba(217,182,117,.95));
-  box-shadow: 1701px 734px var(--gold), 1558px 472px var(--gold), 618px 169px var(--gold), 721px 309px var(--gold), 950px 1348px var(--gold), 955px 24px var(--gold), 1986px 1206px var(--gold), 746px 538px var(--gold), 1154px 8px var(--gold), 596px 858px var(--gold), 2189px 756px var(--gold), 2497px 1159px var(--gold), 1305px 257px var(--gold), 2111px 1264px var(--gold), 221px 935px var(--gold), 2290px 803px var(--gold), 1630px 817px var(--gold), 1614px 212px var(--gold), 1972px 1299px var(--gold), 1640px 127px var(--gold), 780px 137px var(--gold), 855px 902px var(--gold), 664px 225px var(--gold), 1392px 1230px var(--gold);
+  opacity:1;
+  filter: blur(.3px) drop-shadow(0 0 9px rgba(255,201,77,1));
+  box-shadow: 1701px 734px var(--particle-gold), 1558px 472px var(--particle-gold), 618px 169px var(--particle-gold), 721px 309px var(--particle-gold), 950px 1348px var(--particle-gold), 955px 24px var(--particle-gold), 1986px 1206px var(--particle-gold), 746px 538px var(--particle-gold), 1154px 8px var(--particle-gold), 596px 858px var(--particle-gold), 2189px 756px var(--particle-gold), 2497px 1159px var(--particle-gold), 1305px 257px var(--particle-gold), 2111px 1264px var(--particle-gold), 221px 935px var(--particle-gold), 2290px 803px var(--particle-gold), 1630px 817px var(--particle-gold), 1614px 212px var(--particle-gold), 1972px 1299px var(--particle-gold), 1640px 127px var(--particle-gold), 780px 137px var(--particle-gold), 855px 902px var(--particle-gold), 664px 225px var(--particle-gold), 1392px 1230px var(--particle-gold);
   animation: starDriftB 120s linear infinite reverse;
 }
 .stars--md::after{
-  content:""; position:absolute; top:1400px; left:0; width:3px; height:3px; border-radius:50%;
+  content:""; position:absolute; top:1400px; left:0; width:4px; height:4px; border-radius:50%;
   box-shadow: inherit;
 }
 @keyframes starDriftA{ from{ transform: translateY(0); } to{ transform: translateY(-1400px); } }

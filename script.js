@@ -127,28 +127,47 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ---------------- Venture videos: play + sound on scroll into view ---------------- */
+  // Browsers only allow audio to autoplay after the visitor has interacted with
+  // the page at all (a tap, click or key press — this is a browser rule, not
+  // something a site can turn off). To get sound on as close to "automatic" as
+  // possible, we prime playback on the very first interaction anywhere on the
+  // page — including the first touch that starts a scroll on mobile — so that
+  // by the time a video scrolls into view, the browser already treats the
+  // visitor as engaged and allows sound.
+  let pageActivated = false;
+  const activatePage = () => { pageActivated = true; };
+  ['pointerdown', 'touchstart', 'keydown', 'wheel'].forEach(evt =>
+    document.addEventListener(evt, activatePage, { once: true, passive: true })
+  );
+
   const ventureFrames = document.querySelectorAll('.venture__frame');
   if (ventureFrames.length) {
     ventureFrames.forEach(frame => {
       const video = frame.querySelector('video');
       const soundPill = frame.querySelector('.venture__sound');
+      const soundLabel = soundPill ? soundPill.querySelector('.label') : null;
       if (!video) return;
 
-      video.muted = true; // start muted so autoplay is always allowed
+      video.muted = true; // start muted so the browser always allows playback
       video.playsInline = true;
+
+      const setLabel = (text) => { if (soundLabel) soundLabel.textContent = text; };
 
       const attemptSound = () => {
         video.muted = false;
         const p = video.play();
         if (p && p.catch) {
           p.catch(() => {
-            // Browser blocked audio autoplay — fall back to muted playback
+            // Browser blocked audio autoplay this time — fall back to muted
+            // playback with a tappable pill so the visitor can turn it on.
             video.muted = true;
             video.play().catch(() => {});
             if (soundPill) soundPill.classList.add('is-muted');
+            setLabel('Tap for sound');
           });
         }
         if (soundPill) soundPill.classList.remove('is-muted');
+        if (!video.muted) setLabel('Sound on');
       };
 
       const io = new IntersectionObserver((entries) => {
@@ -166,15 +185,24 @@ document.addEventListener('DOMContentLoaded', () => {
       }, { threshold: [0, 0.55, 1] });
       io.observe(frame);
 
+      // If the page becomes "activated" while this video is already the one
+      // in view (e.g. the first scroll gesture itself), immediately retry
+      // with sound rather than waiting for the next scroll trigger.
+      document.addEventListener('pointerdown', () => {
+        if (frame.classList.contains('is-playing') && video.muted) attemptSound();
+      }, { once: true });
+
       // Tap the sound pill to retry unmuted playback (covers blocked-autoplay case)
       if (soundPill) {
         soundPill.addEventListener('click', () => {
           video.muted = !video.muted;
           if (!video.muted) {
-            video.play().catch(() => { video.muted = true; });
+            video.play().catch(() => { video.muted = true; setLabel('Tap for sound'); });
             soundPill.classList.remove('is-muted');
+            setLabel('Sound on');
           } else {
             soundPill.classList.add('is-muted');
+            setLabel('Tap for sound');
           }
         });
       }

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blog — Precious Mceshiet Diri</title>
+<meta name="description" content="Stories, insights and reflections on purpose, entrepreneurship and impact from Precious Mceshiet Diri.">
+
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Emekaeluem/precious-diri/main/images/precious-logo.PNG">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="orb-field" aria-hidden="true">
+  <div class="orb orb--gold"></div>
+  <div class="orb orb--rose"></div>
+  <div class="orb orb--soft"></div>
+</div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <a href="index.html#home" class="nav__brand">
+    <img src="https://raw.githubusercontent.com/Emekaeluem/precious-diri/main/images/precious-logo.PNG" alt="Precious Diri logo">
+    <span>Precious Diri</span>
+  </a>
+
+  <div class="nav__links">
+    <a href="index.html#home">Home</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="blog.html" class="is-active">Blog</a>
+    <a href="index.html#contact" class="btn btn-primary">Work With Precious</a>
+  </div>
+
+  <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav__mobile" id="mobileMenu">
+  <a href="index.html#home">Home</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="blog.html">Blog</a>
+</div>
+
+<main>
+  <section class="blog-hero">
+    <div class="container reveal">
+      <p class="eyebrow" style="justify-content:center;">The Blog</p>
+      <h1 style="font-size:clamp(2.2rem,5vw,3.6rem); color:var(--cream); margin-top:1.1rem;">Stories &amp; Reflections</h1>
+      <p class="lede">Thoughts on purpose, entrepreneurship, real estate and building a life that means something — from Precious, as she writes them.</p>
+    </div>
+  </section>
+
+  <section class="section section-tight">
+    <div class="container">
+      <div class="glass blog-empty reveal">
+        <div class="blog-empty__icon">P</div>
+        <h3 style="color:var(--cream);">The first story is being written.</h3>
+        <p>Precious is putting her thoughts on purpose, business and impact into words. New posts will appear here as soon as they're ready — check back soon.</p>
+        <div class="btn-row">
+          <a href="index.html#contact" class="btn btn-primary">Get Notified</a>
+          <a href="index.html#home" class="btn btn-ghost">Back to Home</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <img src="https://raw.githubusercontent.com/Emekaeluem/precious-diri/main/images/precious-logo.PNG" alt="Precious Diri logo">
+        <div class="footer__brand-text">
+          <span>Precious Mceshiet Diri</span>
+          <small>Building with purpose. Leading with impact.</small>
+        </div>
+      </div>
+      <div class="footer__links">
+        <div class="footer__col">
+          <h4>Site</h4>
+          <a href="index.html#home">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#contact">Contact</a>
+          <a href="blog.html">Blog</a>
+        </div>
+        <div class="footer__col">
+          <h4>Ventures</h4>
+          <a href="index.html#realty">Lagos Finest Realty</a>
+          <a href="index.html#jewelry">Prekeish Jewelry</a>
+          <a href="index.html#ushers">Peridot Ushers</a>
+        </div>
+        <div class="footer__col">
+          <h4>Connect</h4>
+          <a href="mailto:REPLACE_WITH_PRECIOUS_EMAIL@example.com">Email</a>
+          <a href="#" target="_blank" rel="noopener">Instagram</a>
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> Precious Mceshiet Diri. All rights reserved.</span>
+      <span>Site by Emstan Tech</span>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/script.js"></script>
+</body>
+</html>

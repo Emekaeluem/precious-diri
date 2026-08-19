@@ -81,12 +81,24 @@ input, textarea, select{ font: inherit; color: inherit; }
 }
 
 /* ---------- Type scale ---------- */
-h1,h2,h3,h4{ font-family: var(--font-display); font-weight:600; line-height:1.08; letter-spacing:-0.01em; }
+h1,h2,h3,h4{ font-family: var(--font-display); font-weight:600; line-height:1.08; letter-spacing:-0.01em; text-wrap: balance; }
 h1{ font-size: clamp(2.6rem, 6.2vw, 5.4rem); font-weight: 500; }
 h2{ font-size: clamp(2rem, 4.4vw, 3.4rem); }
 h3{ font-size: clamp(1.4rem, 2.6vw, 1.9rem); }
-p{ color: var(--muted); }
+p{ color: var(--muted); text-wrap: pretty; }
 .lede{ font-size: clamp(1.05rem, 1.6vw, 1.25rem); line-height:1.75; }
+
+/* Balance short, headline-like text everywhere so a wrap never leaves a
+   lonely word or two on its own line — especially important on mobile
+   where columns are narrow and wraps happen far more often. */
+.eyebrow, .story__quote, .philosophy__statement, .impact__label,
+.footer__brand-text span, .footer__brand-text small, .footer__bottom span,
+.blog-empty h3, .venture__name h3, .hero__sub, .btn{
+  text-wrap: balance;
+}
+.venture__desc, .contact__info p, .purpose p, .blog-empty p, .lede{
+  text-wrap: pretty;
+}
 
 .eyebrow{
   display:inline-flex; align-items:center; gap:.6em;
@@ -189,27 +201,27 @@ p{ color: var(--muted); }
 }
 .stars{
   position:absolute; top:0; left:0;
-  width:2px; height:2px; border-radius:50%;
+  width:3px; height:3px; border-radius:50%;
   background:transparent;
 }
 .stars--sm{
-  opacity:.55;
-  filter: blur(.3px) drop-shadow(0 0 3px rgba(217,182,117,.65));
+  opacity:.75;
+  filter: blur(.3px) drop-shadow(0 0 4px rgba(217,182,117,.85));
   box-shadow: 1326px 308px var(--gold-soft), 1617px 1333px var(--gold-soft), 197px 148px var(--gold-soft), 2194px 192px var(--gold-soft), 1497px 1193px var(--gold-soft), 237px 1039px var(--gold-soft), 879px 76px var(--gold-soft), 352px 888px var(--gold-soft), 1712px 143px var(--gold-soft), 985px 185px var(--gold-soft), 2257px 869px var(--gold-soft), 242px 1158px var(--gold-soft), 507px 457px var(--gold-soft), 2583px 1284px var(--gold-soft), 2387px 126px var(--gold-soft), 2363px 1199px var(--gold-soft), 1624px 101px var(--gold-soft), 905px 95px var(--gold-soft), 2280px 272px var(--gold-soft), 1186px 858px var(--gold-soft), 590px 1107px var(--gold-soft), 482px 1169px var(--gold-soft), 1263px 1147px var(--gold-soft), 740px 211px var(--gold-soft), 2382px 1169px var(--gold-soft), 769px 762px var(--gold-soft), 399px 1121px var(--gold-soft), 257px 1155px var(--gold-soft), 244px 1267px var(--gold-soft), 843px 1016px var(--gold-soft), 2177px 875px var(--gold-soft), 1286px 953px var(--gold-soft), 2398px 928px var(--gold-soft), 1481px 613px var(--gold-soft), 1017px 368px var(--gold-soft), 999px 167px var(--gold-soft), 2352px 614px var(--gold-soft), 2151px 1013px var(--gold-soft), 1406px 919px var(--gold-soft), 1179px 1247px var(--gold-soft), 299px 241px var(--gold-soft), 2096px 856px var(--gold-soft), 675px 700px var(--gold-soft), 622px 1001px var(--gold-soft), 1727px 80px var(--gold-soft), 317px 1142px var(--gold-soft), 2347px 642px var(--gold-soft), 1393px 717px var(--gold-soft), 2434px 1017px var(--gold-soft), 2375px 934px var(--gold-soft), 281px 191px var(--gold-soft), 1105px 970px var(--gold-soft), 266px 124px var(--gold-soft), 1268px 1325px var(--gold-soft), 2367px 1395px var(--gold-soft), 1825px 582px var(--gold-soft), 1580px 1369px var(--gold-soft), 1421px 46px var(--gold-soft), 1891px 727px var(--gold-soft), 688px 1251px var(--gold-soft), 479px 1011px var(--gold-soft), 241px 446px var(--gold-soft), 1177px 264px var(--gold-soft), 1014px 814px var(--gold-soft), 1601px 1016px var(--gold-soft), 330px 340px var(--gold-soft), 1839px 822px var(--gold-soft), 2250px 569px var(--gold-soft), 560px 881px var(--gold-soft), 2253px 570px var(--gold-soft);
   animation: starDriftA 170s linear infinite;
 }
 .stars--sm::after{
-  content:""; position:absolute; top:1400px; left:0; width:2px; height:2px; border-radius:50%;
+  content:""; position:absolute; top:1400px; left:0; width:3px; height:3px; border-radius:50%;
   box-shadow: inherit;
 }
 .stars--md{
-  opacity:.7;
-  filter: blur(.4px) drop-shadow(0 0 5px rgba(217,182,117,.8));
+  opacity:.9;
+  filter: blur(.4px) drop-shadow(0 0 7px rgba(217,182,117,.95));
   box-shadow: 1701px 734px var(--gold), 1558px 472px var(--gold), 618px 169px var(--gold), 721px 309px var(--gold), 950px 1348px var(--gold), 955px 24px var(--gold), 1986px 1206px var(--gold), 746px 538px var(--gold), 1154px 8px var(--gold), 596px 858px var(--gold), 2189px 756px var(--gold), 2497px 1159px var(--gold), 1305px 257px var(--gold), 2111px 1264px var(--gold), 221px 935px var(--gold), 2290px 803px var(--gold), 1630px 817px var(--gold), 1614px 212px var(--gold), 1972px 1299px var(--gold), 1640px 127px var(--gold), 780px 137px var(--gold), 855px 902px var(--gold), 664px 225px var(--gold), 1392px 1230px var(--gold);
   animation: starDriftB 120s linear infinite reverse;
 }
 .stars--md::after{
-  content:""; position:absolute; top:1400px; left:0; width:2px; height:2px; border-radius:50%;
+  content:""; position:absolute; top:1400px; left:0; width:3px; height:3px; border-radius:50%;
   box-shadow: inherit;
 }
 @keyframes starDriftA{ from{ transform: translateY(0); } to{ transform: translateY(-1400px); } }
@@ -721,6 +733,22 @@ p{ color: var(--muted); }
 .footer__bottom{
   margin-top: 1.8rem; display:flex; flex-wrap:wrap; gap:1rem;
   justify-content:space-between; font-size:.78rem; color: var(--muted-2);
+}
+
+/* On mobile the full footer (brand block + three link columns) gets noisy
+   and text wraps awkwardly — the nav's hamburger menu already covers
+   navigation, so mobile shows only the essential credit line, centered
+   and balanced across two short lines instead of one cramped one. */
+@media (max-width: 640px){
+  .footer{ padding-block: 2.2rem 2rem; }
+  .footer__top{ display:none; }
+  .footer__bottom{
+    margin-top:0;
+    flex-direction:column;
+    align-items:center;
+    text-align:center;
+    gap:.5rem;
+  }
 }
 
 /* ---------- Blog page ---------- */

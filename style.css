@@ -39,7 +39,7 @@
 
 /* ---------- Reset ---------- */
 *, *::before, *::after{ box-sizing: border-box; margin:0; padding:0; }
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; overflow-x: hidden; width: 100%; }
 body{
   background: var(--bg);
   color: var(--cream);
@@ -47,8 +47,12 @@ body{
   font-size: 16px;
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
 }
+img, video, svg{ max-width: 100%; }
+.container, .grid-2{ min-width: 0; }
+.venture__copy, .contact__info, .form{ min-width: 0; }
 img, video{ max-width:100%; display:block; }
 a{ color: inherit; text-decoration:none; }
 ul{ list-style:none; }
@@ -119,6 +123,58 @@ p{ color: var(--muted); }
   border-radius: var(--radius);
 }
 
+/* ---------- Section backgrounds (each section gets its own feel) ---------- */
+.bg-intro{
+  background:
+    radial-gradient(90% 70% at 88% 6%, rgba(231,183,176,.10), transparent 55%),
+    var(--bg);
+}
+.bg-story{
+  background:
+    radial-gradient(85% 65% at 8% 100%, rgba(217,182,117,.11), transparent 55%),
+    var(--bg-alt);
+}
+.bg-realty{
+  background:
+    linear-gradient(155deg, var(--bg-alt-2) 0%, var(--bg) 70%);
+}
+.bg-jewelry{
+  background:
+    radial-gradient(100% 80% at 50% 50%, rgba(231,183,176,.14), transparent 60%),
+    var(--bg);
+}
+.bg-ushers{
+  background:
+    radial-gradient(90% 75% at 15% 15%, rgba(217,182,117,.13), transparent 55%),
+    var(--bg-alt-2);
+}
+.bg-purpose{
+  background:
+    radial-gradient(70% 60% at 20% 0%, rgba(217,182,117,.13), transparent 55%),
+    radial-gradient(70% 60% at 85% 100%, rgba(231,183,176,.13), transparent 55%),
+    var(--bg-alt);
+}
+.bg-philosophy{
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg-alt) 100%);
+}
+.bg-impact{
+  background: var(--bg-alt-2);
+}
+.bg-contact{
+  background:
+    radial-gradient(80% 70% at 90% 0%, rgba(217,182,117,.10), transparent 55%),
+    radial-gradient(80% 70% at 5% 100%, rgba(231,183,176,.10), transparent 55%),
+    var(--bg);
+}
+.bg-closing{ background: var(--bg-alt); }
+.bg-footer{ background: var(--bg-alt-2); }
+.bg-blog-hero{
+  background:
+    radial-gradient(80% 60% at 50% 0%, rgba(217,182,117,.12), transparent 55%),
+    var(--bg);
+}
+.bg-blog-empty{ background: var(--bg-alt); }
+
 /* ---------- Ambient orbs (signature atmosphere) ---------- */
 .orb-field{
   position: fixed; inset:0;
@@ -164,9 +220,11 @@ p{ color: var(--muted); }
   font-size: .95rem;
   font-weight: 600;
   letter-spacing:.01em;
+  text-align: center;
   transition: transform .45s var(--ease), box-shadow .45s var(--ease), background .45s var(--ease), color .3s ease;
-  white-space: nowrap;
+  max-width: 100%;
 }
+@media (min-width: 480px){ .btn{ white-space: nowrap; } }
 .btn-primary{
   background: linear-gradient(120deg, var(--gold-soft), var(--gold) 55%, var(--gold-deep));
   color: #241A12;
@@ -240,7 +298,7 @@ p{ color: var(--muted); }
 /* ---------- Purpose Thread (signature) ---------- */
 .thread{
   position: fixed;
-  left: 2.2rem; top: 50%; transform: translateY(-50%);
+  right: 2.2rem; top: 50%; transform: translateY(-50%);
   z-index: 150;
   display:none;
   flex-direction:column; align-items:center;
@@ -274,7 +332,7 @@ p{ color: var(--muted); }
   box-shadow: 0 0 10px 2px rgba(217,182,117,.7);
 }
 .thread__label{
-  position:absolute; left:16px; top:50%; transform: translateY(-50%);
+  position:absolute; right:16px; top:50%; transform: translateY(-50%);
   font-size:.68rem; letter-spacing:.14em; text-transform:uppercase;
   color: var(--muted-2); white-space:nowrap;
   opacity:0; transition: opacity .3s ease, color .3s ease;

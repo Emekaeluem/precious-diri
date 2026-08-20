@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ---------------- Active nav link (scrollspy for anchors) ---------------- */
   const navLinks = document.querySelectorAll('.nav__links a[href*="#"], .nav__mobile a[href*="#"]');
-  const anchorSections = ['home', 'about', 'contact']
+  const anchorSections = ['home', 'contact']
     .map(id => document.getElementById(id))
     .filter(Boolean);
 

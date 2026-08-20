@@ -752,6 +752,76 @@ p{ color: var(--muted); text-wrap: pretty; }
   }
 }
 
+/* ---------- Contact page ---------- */
+.bg-contact-hero{
+  background:
+    radial-gradient(80% 70% at 90% 0%, rgba(217,182,117,.16), transparent 60%),
+    radial-gradient(80% 70% at 5% 100%, rgba(231,183,176,.16), transparent 60%),
+    rgba(20,15,25,.7);
+}
+.bg-instagram{ background: rgba(27,20,32,.78); }
+
+/* ---------- Instagram-style grid ---------- */
+.insta-handle{
+  display:inline-flex; align-items:center; gap:.5rem;
+  margin-top:.7rem;
+  color: var(--gold-soft); font-weight:600; font-size:.95rem;
+}
+
+/* ---------- Social icon row (compact "follow" links) ---------- */
+.social-row{
+  display:flex; flex-wrap:wrap; gap:.8rem;
+  margin-top: 1.6rem;
+}
+.social-icon-btn{
+  width:46px; height:46px;
+  border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,0.03);
+  color: var(--gold-soft);
+  transition: border-color .35s ease, transform .35s ease, background .35s ease;
+}
+.social-icon-btn:hover{ border-color: var(--gold-soft); background: rgba(217,182,117,.1); transform: translateY(-3px); }
+.social-icon-btn svg{ width:19px; height:19px; }
+.insta-grid{
+  margin-top: 2.6rem;
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .6rem;
+}
+@media (min-width: 640px){
+  .insta-grid{ grid-template-columns: repeat(3, 1fr); gap:.9rem; }
+}
+.insta-tile{
+  position:relative;
+  display:block;
+  aspect-ratio: 1 / 1;
+  overflow:hidden;
+  border-radius: 12px;
+  border: 1px solid var(--line-soft);
+  background: var(--bg-alt-2);
+}
+.insta-tile img{
+  width:100%; height:100%; object-fit:cover;
+  transition: transform .7s var(--ease);
+}
+.insta-tile:hover img{ transform: scale(1.08); }
+.insta-tile__overlay{
+  position:absolute; inset:0;
+  background: rgba(20,15,25,.5);
+  display:flex; align-items:center; justify-content:center; gap:1.3rem;
+  opacity:0; transition: opacity .35s ease;
+}
+.insta-tile:hover .insta-tile__overlay{ opacity:1; }
+.insta-tile__overlay svg{ width:22px; height:22px; color:#fff; }
+.insta-tile--placeholder{
+  display:flex; align-items:center; justify-content:center;
+  background: linear-gradient(135deg, rgba(217,182,117,.1), rgba(231,183,176,.1));
+  color: var(--muted-2);
+}
+.insta-tile--placeholder svg{ width:26px; height:26px; opacity:.55; }
+
 /* ---------- About page: section backgrounds ---------- */
 .bg-about-hero{
   background:
